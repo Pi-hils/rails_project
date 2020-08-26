@@ -4,8 +4,10 @@ Rails.application.routes.draw do
   # For details on the DSL available within this file, see https://guides.rubyonrails.org/routing.html
   
   #dashboard
-  get "/dashboard" => "accounts#index"
-  
-  root to: "public#homepage"
+   get "public/homepage"
+
+  resources :post
+
+  root "public#homepage"
 
 end
